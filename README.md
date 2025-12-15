@@ -10,6 +10,7 @@ high-intent leads with a suggested reply.
 The implementation is intentionally kept simple, readable, and production-ready
 for an MVP use case.
 
+
 TECH STACK
 
 - Node.js (18+)
@@ -19,6 +20,7 @@ TECH STACK
 - dotenv
 - express-validator
 - Jest (basic tests)
+
 
 PROJECT STRUCTURE
 
@@ -44,6 +46,7 @@ leadequator-backend/
 |
 |-- tests/
     |-- api.test.js
+
 
 
 SETUP INSTRUCTIONS
@@ -79,6 +82,7 @@ npm test
 
 API ENDPOINTS
 
+
 1. Health Check
 
 GET /api/health
@@ -87,6 +91,7 @@ Response:
 {
   "status": "ok"
 }
+
 
 2. Ingest Social Posts
 
@@ -106,6 +111,7 @@ Response:
   "saved": 3
 }
 
+
 3. Score Intent (On-Demand)
 
 POST /api/score
@@ -123,6 +129,7 @@ Response:
   "confidence": 0.9,
   "reply": "Thanks for the post! We help exactly with this – mind if I DM you a quick suggestion?"
 }
+
 
 4. Get High-Intent Leads
 
@@ -142,6 +149,7 @@ Response:
   }
 ]
 
+
 5. Dashboard Stats (Bonus)
 
 GET /api/dashboard
@@ -152,6 +160,7 @@ Response:
   "highIntent": 18,
   "todayHigh": 7
 }
+
 
 INTENT SCORING LOGIC
 
@@ -182,11 +191,13 @@ Confidence Scores:
 
 For high-intent posts, an automatic reply is generated to simulate lead engagement.
 
+
 NOTES
 
 - The backend avoids heavy machine learning to keep the MVP simple and explainable.
 - The logic is modular and easy to extend.
 - The dashboard endpoint is API-based only (no frontend UI required).
+
 
 AUTHOR
 
